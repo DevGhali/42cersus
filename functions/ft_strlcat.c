@@ -37,7 +37,7 @@ size_t ft_strlcat(char *dest, char *src, size_t size)
 }
 
 
-#include <string.h>
+/*#include <string.h>
 int main(void)
 {
 	char src[100] = "from he";
@@ -51,4 +51,4 @@ int main(void)
     printf("%s\n", src1); 
     printf("%s\n", dest1);
 	return 0;
-}
+}*/
