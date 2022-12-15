@@ -1,6 +1,16 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/15 12:41:57 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/15 14:42:30 by gabd-el-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include <unistd.h>
 
 int	ft_strlen(char *str)
 {
@@ -17,44 +27,36 @@ int	ft_strlen(char *str)
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
     size_t x;
-    size_t y;
     size_t dstlen;
-    size_t srclen;
 
     dstlen = ft_strlen(dst);
-    srclen = ft_strlen((char *)src);
     x = 0;
-    y = 0;
-    if (size == 0)
+    if (size == 0) return (ft_strlen((char *)src));
+    else
     {
-        return (srclen);
-    }
-    if (size < dstlen)
-    {
-        while (x < size)
+        if (size <= dstlen)
         {
-            if (src[x] != '\0')
+            while (x < size - 1)
             {
-                dst[x] = src[x];  
+                if (src[x] != '\0') dst[x] = src[x];
+                else
+                    dst[x] = '\0';
+                x++;
             }
-            else
-            {
-                dst[x] = '\0';
-            }
-            x++;
-        }
+            while (dst[x] != '\0') dst[x++] = '\0'; 
+        }   
     }
-    return (srclen);
+    return (ft_strlen((char *)src));
 }
 
-
-#include <string.h>
+/*#include <string.h>
+#include <stdio.h>
 int main(void)
 {
-	char src[100] = "from here";
-	char dest[100] = "toad";
-    char src1[100] = "from here";
-	char dest1[100] = "toad";
+	char src[] = "f";
+	char dest[] = "to here";
+    char src1[] = "f";
+	char dest1[] = "to here";
     printf("%zu\n", ft_strlcpy(dest, src, 2));
 	printf("%zu\n", strlcpy(dest1, src1, 2));
     printf("%s\n", src); 
@@ -62,4 +64,4 @@ int main(void)
     printf("%s\n", src1); 
     printf("%s\n", dest1);
 	return 0;
-}
+}*/

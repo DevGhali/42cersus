@@ -1,4 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/15 12:41:55 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/15 14:42:35 by gabd-el-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
 
 int	ft_strlen(char *str)
 {
@@ -38,6 +50,7 @@ size_t ft_strlcat(char *dest, char *src, size_t size)
 
 
 /*#include <string.h>
+#include <stdio.h>
 int main(void)
 {
 	char src[100] = "from he";
