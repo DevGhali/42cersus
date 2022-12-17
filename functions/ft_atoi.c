@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabd-el- <gabd-el-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:42:03 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/16 23:16:46 by gabd-el-         ###   ########.fr       */
+/*   Created: 2022/12/16 23:07:29 by ghaliabdelh       #+#    #+#             */
+/*   Updated: 2022/12/17 02:26:59 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_tolower(int c)
+int ft_atoi(const char *str)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (c + 32);
-    return (c);
+    size_t result;
+
+    result = 0;
+    
+    
+}
+
+int main()
+{
+    char *str = "-15243 445458";
 }
