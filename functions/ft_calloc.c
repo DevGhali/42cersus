@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabd-el- <gabd-el-@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:27 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/17 16:32:51 by gabd-el-         ###   ########.fr       */
+/*   Created: 2022/12/17 15:51:37 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/18 02:06:19 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_bzero(void *s, size_t n)
+void *ft_calloc(size_t count, size_t size)
 {
-    size_t i;
-    char *ptr;
-
-    i = 0;
-    ptr = (char *) s;
-    if (n > 0)
+    void *ptr;
+    
+    
+    while (count > 0)
     {
-        while (i < n)
-        {
-            ptr[i++] = '\0';
-        }   
+        
     }
+    
 }
