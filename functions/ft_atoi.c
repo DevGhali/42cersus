@@ -6,11 +6,12 @@
 /*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 23:07:29 by ghaliabdelh       #+#    #+#             */
-/*   Updated: 2022/12/18 14:58:18 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/18 15:04:30 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {

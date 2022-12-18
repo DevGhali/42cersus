@@ -6,11 +6,12 @@
 /*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:48:23 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 14:58:11 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/18 15:04:59 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void *memchr(const void *s, int c, size_t n)
 {

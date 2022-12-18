@@ -6,11 +6,12 @@
 /*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:41:55 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 14:58:05 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/18 15:05:29 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
