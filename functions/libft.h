@@ -6,13 +6,14 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 16:25:03 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:16:12 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/18 18:41:26 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
+# include <stdlib.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
