@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:27 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 14:58:16 by gabd-el-         ###   ########.fr       */
+/*   Created: 2022/12/15 16:37:24 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/18 14:58:02 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_bzero(void *s, size_t n)
+char *ft_strrchr(const char *s, int c)
 {
-    size_t i;
+    char x;
     char *ptr;
 
-    i = 0;
-    ptr = (char *) s;
-    if (n > 0)
+    x = (char) c;
+    while (*s != '\0')
     {
-        while (i < n)
+        if (*s == x)
         {
-            ptr[i++] = '\0';
-        }   
+            ptr = (char *)s;
+        }
+        s++;
     }
+    if (*ptr == x)
+    {
+        return &(*ptr);
+    }
+    return (char *)NULL;
 }
+
+/*#include <stdio.h>
+int main()
+{
+    const char *str = "heea";
+    char  c;
+
+    c = 'q';
+    printf("Found letter:%c\n", *ft_strrchr(str, c));
+    //*ft_strchr(str, c);
+    return (0);
+}*/

@@ -6,13 +6,13 @@
 /*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:41:37 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/15 14:42:33 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/18 14:58:13 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int isascii(int c)
+int ft_isascii(int c)
 {
     if (c >= 0 && c <= 127)
         return (1);

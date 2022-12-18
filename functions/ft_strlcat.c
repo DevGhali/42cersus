@@ -6,7 +6,7 @@
 /*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:41:55 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/15 14:42:35 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/18 14:58:05 by gabd-el-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-size_t ft_strlcat(char *dest, char *src, size_t size)
+size_t ft_strlcat(char *dest, const char *src, size_t size)
 {
     size_t    x;
     size_t    y;
