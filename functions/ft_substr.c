@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 18:01:43 by codespace         #+#    #+#             */
-/*   Updated: 2022/12/18 18:41:28 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/21 20:27:11 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     }
     sub[i] = '\0';
     return sub;
-    
-    
 }
 
 /*#include <stdio.h>
