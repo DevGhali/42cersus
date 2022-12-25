@@ -13,7 +13,6 @@
 #include "libft.h"
 #include <unistd.h>
 
-
 int ft_strlen(char *s)
 {
     int i;
@@ -52,11 +51,11 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return sub;
 }
 
-/*#include <stdio.h>
+#include <stdio.h>
 int main()
 {
     char *str = "Hello World!";
     char *sub = ft_substr(str, 100, 1);
     printf("%s\n", sub);
     return (0);
-}*/
+}

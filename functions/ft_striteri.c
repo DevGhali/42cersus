@@ -1,55 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/22 22:38:46 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/23 11:59:03 by codespace        ###   ########.fr       */
+/*   Created: 2022/12/23 11:53:20 by codespace         #+#    #+#             */
+/*   Updated: 2022/12/23 12:28:35 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-int ft_strlen(char *s)
+void ft_putchar_fd(char c, int fd)
 {
-    int i;
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return i;
+    if (fd < 0)
+        return ;
+    write(fd, &c, 1);
 }
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    char *ret;
-    int i;
+    unsigned int i;
 
-    if (!(ret = malloc(sizeof(char) * ft_strlen((char *)s) + 1)) || !s)
-        return (NULL);
     i = 0;
+    if(!s || !f)
+        return ;
     while (s[i] != '\0')
     {
-        ret[i] = f(i, s[i]);
+        f(i, s);
         i++;
     }
-    ret[i] = '\0';
-    return (ret);
 }
-/*
-char func(unsigned int i, char str)
-{
-    printf("My inner function: index = %d and %c\n", i, str);
-    return str - 32;
-}
-
-#include <stdio.h>
 int main()
 {
     char *str = "hello";
-    char *ret = ft_strmapi(str, func);
-    printf("%s\n", ret);
+    void (*f)(unsigned int, char*);
+    f = &ft_putchar_fd;
+    ft_striteri(str, f);
     return (0);
-}*/
+}
