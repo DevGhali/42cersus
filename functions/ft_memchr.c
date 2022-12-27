@@ -6,14 +6,14 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:48:23 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:19:15 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/26 19:06:18 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void *memchr(const void *s, int c, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
     unsigned char x;
     unsigned char *y;
