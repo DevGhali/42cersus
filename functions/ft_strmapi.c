@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 22:38:46 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/23 11:59:03 by codespace        ###   ########.fr       */
+/*   Updated: 2022/12/26 19:54:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,3 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     ret[i] = '\0';
     return (ret);
 }
-/*
-char func(unsigned int i, char str)
-{
-    printf("My inner function: index = %d and %c\n", i, str);
-    return str - 32;
-}
-
-#include <stdio.h>
-int main()
-{
-    char *str = "hello";
-    char *ret = ft_strmapi(str, func);
-    printf("%s\n", ret);
-    return (0);
-}*/

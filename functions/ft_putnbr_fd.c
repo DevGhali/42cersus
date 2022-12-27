@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 18:38:31 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/22 22:20:37 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/26 19:28:16 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,4 @@ void ft_putnbr_fd(int n, int fd)
         ft_putnbr_fd(n / 10, fd);
         ft_putnbr_fd(n % 10, fd);
     }       
-}
-
-int main()
-{
-    int x = rand();
-  
-    ft_putnbr_fd(0, 1);
-    return 0;
 }
