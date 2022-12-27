@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:41:57 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:32 by gabd-el-         ###   ########.fr       */
+/*   Updated: 2022/12/26 19:40:39 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,3 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
     }
     return (ft_strlen((char *)src));
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int main(void)
-{
-	char src[] = "f";
-	char dest[] = "to here";
-    char src1[] = "f";
-	char dest1[] = "to here";
-    printf("%zu\n", ft_strlcpy(dest, src, 2));
-	printf("%zu\n", strlcpy(dest1, src1, 2));
-    printf("%s\n", src); 
-    printf("%s\n", dest);
-    printf("%s\n", src1); 
-    printf("%s\n", dest1);
-	return 0;
-}*/
