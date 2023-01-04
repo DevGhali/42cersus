@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 18:46:40 by codespace         #+#    #+#             */
-/*   Updated: 2022/12/26 23:42:32 by codespace        ###   ########.fr       */
+/*   Updated: 2023/01/04 14:51:55 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,30 +25,31 @@ int ft_strlen(char *str)
     return (i);
 }
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
-{
-    size_t x;
-    size_t dstlen;
 
-    dstlen = ft_strlen(dst);
+size_t ft_strlcat(char *dest, const char *src, size_t size)
+{
+    size_t    x;
+    size_t    y;
+    size_t    dest_len;
+    size_t    src_len;
+
     x = 0;
-    if (size == 0) return (ft_strlen((char *)src));
-    else
+    y = 0;
+    dest_len = ft_strlen(dest);
+    src_len = ft_strlen((char *)src);
+    if (size <= dest_len)
+        return (size + src_len);
+    y = ft_strlen(dest);
+    while (src[x] != '\0' && x < size - dest_len - 1)
     {
-        if (size <= dstlen)
-        {
-            while (x < size - 1)
-            {
-                if (src[x] != '\0') dst[x] = src[x];
-                else
-                    dst[x] = '\0';
-                x++;
-            }
-            while (dst[x] != '\0') dst[x++] = '\0'; 
-        }   
+        dest[y] = src[x];
+        x++;
+        y++;
     }
-    return (ft_strlen((char *)src));
+    dest[y] = '\0';
+    return (dest_len + src_len);
 }
+
 
 char *prefix(char *s1, char *set)
 {
@@ -74,18 +75,19 @@ char *suffix(char *prefixed, char *set)
     i = 0;
     while (set_len > 0)
     {
+        set_len--;
+        prefixed_len--;
         if (set[set_len] == prefixed[prefixed_len])
         {
             i++;
         }
-        set_len--;
-        prefixed_len--;
+
     }
     if (i == ft_strlen(set))
     {
         if (!(ret = (char *)malloc(sizeof(char) * (ft_strlen(prefixed) - i + 1))))
             return (NULL);
-        ft_strlcpy(ret, prefixed, prefixed_len - i + 1);
+        ft_strlcat(ret, prefixed, ft_strlen(prefixed) - i + 1);
         return (ret);
     }
     else
@@ -100,15 +102,14 @@ char *ft_strtrim(char const *s1, char const *set)
     
     ret = prefix((char *)s1, (char *)set);
     ret = suffix(ret, (char *)set);
-
     return (ret);
 }
 
 #include <stdio.h>
 int main()
 {
-    char *str = "aaaa abcHelloabc  aa";
-    char *set = "aa";
+    char *str = "aaaa abcHelloabc  aa  aaa";
+    char *set = "a";
     char *ret = ft_strtrim(str, set);
     printf("%s\n", ret);
     return (0);
