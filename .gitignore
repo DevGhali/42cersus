@@ -1,2 +1,4 @@
-.DS_Store
+libft/.DS_Store
 .vscode
+.vscode/.gitignore
+.vscode/.DS_Store
