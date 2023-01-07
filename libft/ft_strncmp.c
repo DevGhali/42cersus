@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:42:00 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:34 by gabd-el-         ###   ########.fr       */
+/*   Created: 2022/12/18 15:02:46 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/26 19:40:07 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-int ft_strlen(char *s)
+int ft_strncmp(char *s1, char *s2, size_t n)
 {
-    int i;
+    size_t     i;
 
     i = 0;
-    while (s[i] != '\0')
+    while (i < n && (s1[i] != '\0' && s2[i] != '\0'))
     {
-        i++;
+        if (s1[i] > s2[i])
+        {
+            return (1);
+        }
+        else if (s1[i] < s2[i])
+        {
+            return (-1);
+        }
+        i++;   
     }
-    return (i);
+	return (0);
 }

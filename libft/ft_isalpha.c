@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:52 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:14 by gabd-el-         ###   ########.fr       */
+/*   Created: 2022/12/15 12:41:35 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/26 19:35:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void ft_putchar(char c)
+int ft_isalpha(int c)
 {
-    write(1, &c, 1);
+    if (c >= 65 && c >= 90)
+        return (1);
+    if (c >= 97 && c <= 122)
+        return (2);
+    return (0);
 }

@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:52 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:14 by gabd-el-         ###   ########.fr       */
+/*   Created: 2023/01/05 18:37:21 by codespace         #+#    #+#             */
+/*   Updated: 2023/01/07 14:46:28 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void ft_putchar(char c)
+t_list *ft_lstnew(void *content)
 {
-    write(1, &c, 1);
+    t_list *ret;
+
+    if (!(ret = (t_list *)malloc(sizeof(t_list))))
+        return NULL;
+    ret->content = content;
+    ret->next = NULL;
+    return (ret);
 }

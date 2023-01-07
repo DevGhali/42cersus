@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:52 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:14 by gabd-el-         ###   ########.fr       */
+/*   Created: 2023/01/07 14:12:18 by codespace         #+#    #+#             */
+/*   Updated: 2023/01/07 14:46:54 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void ft_putchar(char c)
+void ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    write(1, &c, 1);
+    t_list *ptr;
+
+    if (!*lst)
+        return ;
+    while (*lst)
+    {
+        ptr = (*lst)->next;
+        ft_lstdelone(*lst, del);
+        *lst = ptr;
+    }
+    *lst = NULL;
 }

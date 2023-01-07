@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:52 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:14 by gabd-el-         ###   ########.fr       */
+/*   Created: 2023/01/06 21:31:58 by codespace         #+#    #+#             */
+/*   Updated: 2023/01/07 14:46:56 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void ft_putchar(char c)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-    write(1, &c, 1);
+    t_list *ptr;
+
+    if (!new)
+        return ;
+    if (!*lst)
+    {
+        *lst = new;
+        return ;
+    }
+    ptr = ft_lstlast(*lst);
+    ptr->next = new;
 }

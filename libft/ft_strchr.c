@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabd-el- <gabd-el-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 12:41:52 by gabd-el-          #+#    #+#             */
-/*   Updated: 2022/12/18 15:05:14 by gabd-el-         ###   ########.fr       */
+/*   Created: 2022/12/18 15:03:06 by gabd-el-          #+#    #+#             */
+/*   Updated: 2022/12/26 19:29:44 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void ft_putchar(char c)
+char *ft_strchr(const char *s, int c)
 {
-    write(1, &c, 1);
+    char x;
+
+    x = (char) c;
+    while (*s != '\0')
+    {
+        if (*s == x)
+        {
+            return ((char *)s);
+        }
+        s++;
+    }
+    return (char *)NULL;
 }
