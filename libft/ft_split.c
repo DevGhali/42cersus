@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: fedora <fedora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 00:38:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/01/04 14:51:47 by codespace        ###   ########.fr       */
+/*   Updated: 2023/01/08 10:47:44 by fedora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <stdlib.h>
 
 static int is_char(char s, char c)
 {
@@ -119,8 +117,7 @@ char **ft_split(char const *s, char c)
     return tab;
 }
 
-#include <stdio.h>
-
+/*#include <stdio.h>
 int main()
 {
     char *s = "*aba**acsa**ghali **abcd ***1234";
@@ -134,4 +131,4 @@ int main()
     }
     printf("\n");
     return (0);    
-}
+}*/
