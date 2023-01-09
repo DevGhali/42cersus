@@ -6,20 +6,20 @@
 /*   By: fedora <fedora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:42:00 by gabd-el-          #+#    #+#             */
-/*   Updated: 2023/01/08 10:54:15 by fedora           ###   ########.fr       */
+/*   Updated: 2023/01/08 23:08:20 by fedora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

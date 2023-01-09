@@ -6,16 +6,15 @@
 /*   By: fedora <fedora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 12:42:05 by gabd-el-          #+#    #+#             */
-/*   Updated: 2023/01/08 10:52:25 by fedora           ###   ########.fr       */
+/*   Updated: 2023/01/08 23:31:44 by fedora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
-        return (c - 32);
-    return (c);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
