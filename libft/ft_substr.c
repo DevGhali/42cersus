@@ -6,7 +6,7 @@
 /*   By: fedora <fedora@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 18:01:43 by codespace         #+#    #+#             */
-/*   Updated: 2023/01/08 23:50:42 by fedora           ###   ########.fr       */
+/*   Updated: 2023/01/10 01:02:24 by fedora           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 
 	i = 0;
-	if (start > ft_strlen((char *)s))
+	if ((int)start > ft_strlen((char *)s))
 	{
 		sub = (char *) malloc(sizeof(char) * (1));
 		if (sub == NULL)
